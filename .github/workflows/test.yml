@@ -3,7 +3,7 @@ name: terraform_test
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   schedule:
-    - cron: '50 23 * * *' # 每日定时触发
+    - cron: '55 23 * * *' # 每日定时触发
   push:
     branches:
       - main
@@ -35,8 +35,8 @@ jobs:
       #     # 这里添加生成报告的命令
       #     echo "Generate and publish report"
 
-      - name: Terraform destroy -auto-approve
-        run: terraform destroy
+      - name: Terraform destroy
+        run: terraform destroy -auto-approve
 
       # - name: Publish to GitHub Pages
       #   uses: peaceiris/actions-gh-pages@v3
