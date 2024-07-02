@@ -35,7 +35,7 @@ jobs:
       #     # 这里添加生成报告的命令
       #     echo "Generate and publish report"
 
-      - name: Terraform destroy
+      - name: Terraform destroy -auto-approve
         run: terraform destroy
 
       # - name: Publish to GitHub Pages
