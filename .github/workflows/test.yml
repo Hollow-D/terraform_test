@@ -3,7 +3,8 @@ name: terraform_test
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   schedule:
-    - cron: '0 0 * * *' # 每日定时触发
+    # - cron: '0 0 * * *' # 每日定时触发
+    - cron: '*/5 * * * *'  # 每 5 分钟触发一次
   # push:
   #   branches:
   #     - main
